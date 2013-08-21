@@ -95,6 +95,10 @@ import com.android.settings.wifi.AdvancedWifiSettings;
 import com.android.settings.wifi.WifiEnabler;
 import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
+import com.android.settings.profiles.AppGroupConfig;
+import com.android.settings.profiles.ProfileConfig;
+import com.android.settings.profiles.ProfilesSettings;
+import com.android.settings.profiles.ProfileEnabler;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -524,6 +528,9 @@ public class Settings extends PreferenceActivity
                 WifiP2pSettings.class.getName().equals(fragmentName) ||
                 BluetoothSettings.class.getName().equals(fragmentName) ||
                 DreamSettings.class.getName().equals(fragmentName) ||
+		ProfilesSettings.class.getName().equals(fragmentName) ||
+                ProfileConfig.class.getName().equals(fragmentName) ||
+                AppGroupConfig.class.getName().equals(fragmentName) ||
                 LocationSettings.class.getName().equals(fragmentName) ||
                 ToggleAccessibilityServicePreferenceFragment.class.getName().equals(fragmentName) ||
                 PrintSettingsFragment.class.getName().equals(fragmentName) ||
@@ -807,6 +814,7 @@ public class Settings extends PreferenceActivity
 
         private AuthenticatorHelper mAuthHelper;
         private DevicePolicyManager mDevicePolicyManager;
+	private final ProfileEnabler mProfileEnabler;
 
         private static class HeaderViewHolder {
             ImageView icon;
@@ -824,6 +832,7 @@ public class Settings extends PreferenceActivity
                 return HEADER_TYPE_CATEGORY;
             } else if (header.id == R.id.wifi_settings
                     || header.id == R.id.bluetooth_settings
+		    || header.id == R.id.profiles_settings
                     || header.id == R.id.trds_settings) {
                 return HEADER_TYPE_SWITCH;
             } else if (header.id == R.id.security_settings) {
@@ -871,6 +880,7 @@ public class Settings extends PreferenceActivity
             mWifiEnabler = new WifiEnabler(context, new Switch(context));
             mBluetoothEnabler = new BluetoothEnabler(context, new Switch(context));
             mDevicePolicyManager = dpm;
+	    mProfileEnabler = new ProfileEnabler(context, new Switch(context));
             mTRDSEnabler = new TRDSEnabler(context, new Switch(context));
         }
 
@@ -944,7 +954,11 @@ public class Settings extends PreferenceActivity
 		    else if (header.id == R.id.trds_settings) {
                         mTRDSSwitch = (Switch) view.findViewById(R.id.switchWidget);
                         mTRDSEnabler.setSwitch(holder.switch_);
-                    } else {
+                    } 
+		    else if (header.id == R.id.profiles_settings) {
+                        mProfileEnabler.setSwitch(holder.switch_);
+                    }
+		    else {
                         mBluetoothEnabler.setSwitch(holder.switch_);
                     } 
                     updateCommonHeaderView(header, holder);
@@ -1020,12 +1034,14 @@ public class Settings extends PreferenceActivity
             mWifiEnabler.resume();
             mBluetoothEnabler.resume();
             mTRDSEnabler.resume();
+	    mProfileEnabler.resume();
         }
 
         public void pause() {
             mWifiEnabler.pause();
             mBluetoothEnabler.pause();
             mTRDSEnabler.pause();
+	    mProfileEnabler.pause();
         }
     }
 
