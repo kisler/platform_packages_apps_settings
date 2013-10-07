@@ -98,6 +98,12 @@
             android:targetClass="com.tmobile.themechooser.ThemeChooser" />
     </header>
 
+    <!-- ChaOS Lab -->
+    <header
+        android:id="@+id/lab_settings"
+        android:fragment="com.android.settings.chameleonos.labs.LabSettings"
+        android:title="@string/lab_settings_title" />
+
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
         android:title="@string/header_category_device" />
