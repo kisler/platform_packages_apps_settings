@@ -1584,6 +1584,12 @@
 
         <activity android:name=".omnikang.Halo" />
 
+	<activity
+            android:name=".cyankang.CyanKangSettings">
+        </activity>
+
+        <activity android:name=".cyankang.StatusBarTrafficColor" />
+
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->
         <activity android:name="Settings$CryptKeeperSettingsActivity"
                 android:label="@string/crypt_keeper_encrypt_title">

@@ -42,6 +42,13 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String KEY_STATUS_BAR_CLOCK = "clock_style_pref";
     private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
 
+    private CheckBoxPreference mStatusBarTraffic_enable;
+    private CheckBoxPreference mStatusBarTraffic_hide;
+    private ListPreference mStatusBarTraffic_summary;
+    private static final String STATUS_BAR_TRAFFIC_ENABLE = "status_bar_traffic_enable";
+    private static final String STATUS_BAR_TRAFFIC_HIDE = "status_bar_traffic_hide";
+    private static final String STATUS_BAR_TRAFFIC_SUMMARY = "status_bar_traffic_summary";
+
     private CheckBoxPreference mStatusBarNetworkActivity;
     private PreferenceScreen mClockStyle;
     private CheckBoxPreference mStatusBarBrightnessControl;
@@ -79,6 +86,19 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             Settings.System.STATUS_BAR_NETWORK_ACTIVITY, 0) == 1);
          mStatusBarNetworkActivity.setOnPreferenceChangeListener(this);
 
+	mStatusBarTraffic_enable = (CheckBoxPreference) prefSet.findPreference(STATUS_BAR_TRAFFIC_ENABLE);
+        mStatusBarTraffic_enable.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                Settings.System.STATUS_BAR_TRAFFIC_ENABLE, 0) == 1));
+
+        mStatusBarTraffic_hide = (CheckBoxPreference) prefSet.findPreference(STATUS_BAR_TRAFFIC_HIDE);
+        mStatusBarTraffic_hide.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                Settings.System.STATUS_BAR_TRAFFIC_HIDE, 1) == 1));
+
+        mStatusBarTraffic_summary = (ListPreference) findPreference(STATUS_BAR_TRAFFIC_SUMMARY);
+        mStatusBarTraffic_summary.setOnPreferenceChangeListener(this);
+        mStatusBarTraffic_summary.setValue((Settings.System.getInt(resolver,
+                Settings.System.STATUS_BAR_TRAFFIC_SUMMARY, 3000)) + "");
+
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
@@ -86,10 +106,15 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         if (preference == mStatusBarBrightnessControl) {
             boolean value = (Boolean) objValue;
             Settings.System.putInt(resolver,Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL, value ? 1 : 0);
-       } else if (preference == mStatusBarNetworkActivity) {
+        } else if (preference == mStatusBarNetworkActivity) {
             boolean value = (Boolean) objValue;
             Settings.System.putInt(resolver,
                 Settings.System.STATUS_BAR_NETWORK_ACTIVITY, value ? 1 : 0);
+        } else if (preference == mStatusBarTraffic_summary) {
+            int val = Integer.valueOf((String) objValue);
+            int index = mStatusBarTraffic_summary.findIndexOfValue((String) objValue);
+            Settings.System.putInt(resolver, Settings.System.STATUS_BAR_TRAFFIC_SUMMARY, val);
+            mStatusBarTraffic_summary.setSummary(mStatusBarTraffic_summary.getEntries()[index]);
         } else {
             return false;
         }
@@ -110,5 +135,20 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         } else {
             mClockStyle.setSummary(getString(R.string.disabled));
         }
+    }
+
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        boolean value;
+
+        if (preference == mStatusBarTraffic_enable) {
+            value = mStatusBarTraffic_enable.isChecked();
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.STATUS_BAR_TRAFFIC_ENABLE, value ? 1 : 0);
+        } else if (preference == mStatusBarTraffic_hide) {
+            value = mStatusBarTraffic_hide.isChecked();
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.STATUS_BAR_TRAFFIC_HIDE, value ? 1 : 0);
+        }
+        return true;
     }
 }
