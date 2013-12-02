@@ -25,6 +25,13 @@
         android:icon="@drawable/ic_settings_status_bar"
         android:title="@string/status_bar_title" />
 
+    <PreferenceScreen
+        android:key="app_sidebar"
+        android:title="@string/app_sidebar_title"        
+        android:summary="@string/app_sidebar_summary"
+        android:icon="@drawable/ic_settings_app_bar"
+        android:fragment="com.android.settings.mahdi.AppSidebar" />
+
    <PreferenceScreen
         android:key="quick_settings_panel"
         android:fragment="com.android.settings.quicksettings.QuickSettings"
