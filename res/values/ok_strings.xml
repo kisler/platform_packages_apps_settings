@@ -66,4 +66,5 @@
     <string name="app_halo_label_black">Blacklist from HALO</string>
     <string name="app_halo_label_white">Whitelist from HALO</string>
 
+    <string name="trds_settings_title">Dark UI (TRDS)</string>
 </resources>
