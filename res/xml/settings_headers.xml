@@ -81,6 +81,16 @@
         android:icon="@drawable/ic_settings_trds"
         android:title="@string/trds_settings_title" />
 
+    <!-- Themes -->
+    <header
+        android:id="@+id/themes_settings"
+        android:title="Temas">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.tmobile.themechooser"
+            android:targetClass="com.tmobile.themechooser.ThemeChooser" />
+    </header>
+
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
         android:title="@string/header_category_device" />
