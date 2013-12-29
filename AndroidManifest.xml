@@ -1585,6 +1585,8 @@
 
         <activity android:name=".omnikang.Halo" />
 
+	<activity android:name=".mahdi.lockscreen-notifications.LockscreenNotifications" />
+
 	<activity
             android:name=".cyankang.CyanKangSettings">
         </activity>

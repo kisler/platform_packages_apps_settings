@@ -22,7 +22,14 @@
         android:summary="@string/lockscreen_target_summary"
         android:title="@string/lockscreen_target_title" />
 
-  <CheckBoxPreference
+    <PreferenceScreen
+            android:key="lockscreen_notifications"
+            android:fragment="com.android.settings.mahdi.lockscreennotifications.LockscreenNotifications"
+            android:title="@string/lockscreen_notifications"
+            android:summary="@string/lockscreen_notifications_summary">
+    </PreferenceScreen>
+
+    <CheckBoxPreference
             android:key="see_through"
             android:title="@string/see_through_title"
             android:summary="@string/see_through_summary" />
