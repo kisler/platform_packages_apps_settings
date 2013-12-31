@@ -27,4 +27,9 @@
                 android:fragment="com.android.settings.purity.NavbarStyleDimenSettings"
                 android:title="@string/navbar_style_dimen_title" />
 
+	<PreferenceScreen 
+            android:key="navigation_control"         
+            android:fragment="com.android.settings.cyanogenmod.NavControl"
+            android:title="@string/navigation_controls_title" />  
+
 </PreferenceScreen>
