@@ -216,7 +216,6 @@
     <string name="pref_network_mode_title">Modos de red</string>
     <string name="pref_screentimeout_mode_title">Modos de tiempo de espera de apagado de pantalla</string>
     <string name="pref_ring_mode_title">Modos de sonido</string>
-    <string name="pref_ring_mode_summary">View or change the Sonido button modes</string>
     <string name="cm_sound_mode_silent">Silencio</string>
     <string name="cm_sound_mode_vibrate">Vibración</string>
     <string name="cm_sound_mode_sound">Sonido</string>
