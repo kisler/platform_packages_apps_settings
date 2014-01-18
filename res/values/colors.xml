@@ -43,4 +43,6 @@
     <color name="circle_avatar_frame_pressed_color">#ffffffff</color>
 
     <color name="tab_selector">#FFFFFFFF</color>
+
+    <color name="halo_color">#ff33b5e5</color>
 </resources>
