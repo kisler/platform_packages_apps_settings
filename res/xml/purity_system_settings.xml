@@ -94,4 +94,10 @@
         android:title="@string/ram_bar_title"
         android:summary="@string/ram_bar_summary" />
 
+    <PreferenceScreen
+        android:id="@+id/wakelock_blocker"
+        android:icon="@drawable/ic_settings_wakelock_blocker"
+        android:title="@string/wakelock_blocker"
+        android:fragment="com.android.settings.aicp.WakeLockBlocker" />
+
 </PreferenceScreen>
