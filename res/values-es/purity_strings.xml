@@ -93,7 +93,7 @@
 
     <string name="volume_adjust_sounds_enable_title">Ajustes de volumen de sonido</string>
     <string name="volume_adjust_sounds_enable_summary">Reproducir sonido cuando ajustamos el volumen con los botones físicos</string>
-    <string name="link_volume_ringtones">Link ringtone &amp; notifications volumes</string>
+    <string name="link_volume_ringtones">Unir volúmenes de tono &amp; notificación</string>
     <string name="link_volume_mutes">El modo de silencio afecta a las notificaciones</string>
     <string name="volume_ring_only_description">Tono de llamada</string>
     <string name="volume_overlay_title">Estilo del panel de volumen</string>
@@ -111,14 +111,6 @@
     <string name="summary_expanded_desktop">%1$s</string>
     <string name="expanded_desktop_summary_status_bar">Con barra de estado</string>
     <string name="expanded_desktop_summary_no_status_bar">Sin barra de estado</string>
-
-   <!-- StatusBar Battery Settings -->
-    <string name="battery_icon_title">Icono de batería</string>
-    <string name="status_bar_battery_title">Estilo del estado de batería</string>
-    <string name="status_bar_style_icon">Icono</string>
-    <string name="status_bar_style_hidden">Oculto</string>
-    <string name="status_bar_battery_status_circle">Circulo</string>
-    <string name="status_bar_battery_status_circle_percentage">Circulo con porcentaje</string>
 
     <!-- Screen off animation -->
     <string name="screen_off_animation">Animaciones al apagar</string>
@@ -143,7 +135,7 @@
     <string name="navigation_bar_height_54">54dpi</string>
     <string name="navigation_bar_height_52">52dpi</string>
     <string name="navigation_bar_height_50">50dpi</string>
-    <string name="navigation_bar_height_48">48dpi (default)</string>
+    <string name="navigation_bar_height_48">48dpi (por defecto)</string>
     <string name="navigation_bar_height_44">44dpi</string>
     <string name="navigation_bar_height_40">40dpi</string>
     <string name="navigation_bar_height_36">36dpi</string>

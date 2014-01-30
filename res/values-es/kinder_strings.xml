@@ -56,6 +56,8 @@
     <string name="halo_enable_title">Activa Halo</string>
     <string name="halo_enable_summary_on">Halo está activado</string>
     <string name="halo_enable_summary_off">Halo está desactivado</string>
+    <string name="halo_color_title">Color Halo</string>
+    <string name="halo_color_summary">Define el color de Halo</string>  
 
     <string name="title_tile_quick_record">Grabación rápida</string>
 
@@ -141,4 +143,152 @@
     <string name="trigger_top_summary">Ajusta la posición vertical del área</string>
     <string name="trigger_bottom_title">Altura</string>
     <string name="trigger_bottom_summary">Ajusta la altura del área</string>
+
+    <!-- Lockscreen Notifications -->
+    <string name="general">General</string>
+    <string name="layout">Disposición</string>
+    <string name="privacy">Privacidad</string>
+    <string name="Lockscreen_notifications_header">Notificaciones en pantalla de bloqueo</string>
+    <string name="lockscreen_notifications">Notificaciones en pantalla de bloqueo</string>
+    <string name="lockscreen_notifications_summary">Mostrar las notificaciones pendientes en la pantalla de bloqueo</string>
+    <string name="pocket_mode">Modo bolsillo</string>
+    <string name="pocket_mode_summary">Enciende la pantalla y muestra todas las notificaciones cuando el dispositivo se saca del bolsillo. Apaga la pantalla cuando el dispositivo se pone de nuevo en el bolsillo.</string>
+    <string name="show_always">Mostrar siempre</string>
+    <string name="show_always_summary">Siempre enciende la pantalla al sacar del bolsillo,incluso cuando no hay notificaciones pendientes</string>
+    <string name="hide_low_priority">Ocultar baja prioridad</string>
+    <string name="hide_low_priority_summary">Ocultar notificaciones de baja prioridad como Google now weather notifications</string>
+    <string name="hide_non_clearable">Ocultar no elimininables</string>
+    <string name="hide_non_clearable_summary">Ocultar notificaciones no eliminables</string>
+    <string name="dismiss_all">Permitir descartar todas las notificaciones </string>
+    <string name="dismiss_all_summary">Permitir descartar las notificaciones no eliminables. Estarán simplemente escondidas de la pantalla de bloqueo y no del panel de notificaciones.</string>
+    <string name="expanded_view">Vista notificación expandida</string>
+    <string name="expanded_view_summary">Mostrar notificaciones expandidas cuando sea posible</string>
+    <string name="force_expanded_view">Forzar vista expandida</string>
+    <string name="force_expanded_view_summary">Mostrar notificaciones expandidas por defecto. Usted todavía será capaz de cambiar entre visualización expandida y vista normal.</string>
+    <string name="wake_on_notification">Activación de notificación</string>
+    <string name="wake_on_notification_summary">Despertar dispositivo cuando se recibe una nueva notificación</string>
+    <string name="notifications_height">Recuento de notificaciones</string>
+    <string name="notifications_height_summary">Número de notificaciones que se muestran a la vez</string>
+    <string name="offset_top">Ajuste a la parte superior de la pantalla:</string>
+    <string name="privacy_mode">Modo de privacidad</string>
+    <string name="privacy_mode_summary">Desactiva las notificaciones mostradas y descartadas. De esta manera , sólo se mostrarán los iconos de las notificaciones.</string>
+    <string name="dynamic_width">Ancho dinámico</string>
+    <string name="dynamic_width_summary">Establece el ancho de las notificaciones dinámicas, de modo que sólo utilizan el espacio que realmente necesitan.</string>
+
+    <!--Lockscreen See Through-->
+    <string name="see_through_title">Efecto desenfoque</string>
+    <string name="see_through_summary">Muestra el contenido detrás de la pantalla de bloqueo, sus datos pueden ser visibles.</string>
+
+     <!-- Custom widgets -->
+    <string name="lockscreen_custom_widgets_title">Personalizar widgets</string>
+    <string name="lockscreen_enable_camera_title">Cámara widget</string>
+
+    <!-- Wakelock blocker -->
+    <string name="wakelock_blocker">Bloqueador de Wakelock</string>
+    <string name="wakelock_blocker_title">Activar</string>
+    <string name="wakelock_blocker_summary">Activar el bloqueo de wakelocks controlado</string>
+    <string name="wakelock_blocker_save">Guardar</string>
+    <string name="wakelock_list_header">Wakelocks disponibles</string>
+    <string name="wakelock_blocker_reload">Refrescar</string>
+    <string name="wakelock_blocker_warning_title">Proceder con precaución</string>
+    <string name="wakelock_blocker_warning">El bloqueo de wakelocks puede causar inestabilidad, accidentes o pérdida de datos.</string>
+
+    <!-- Ram bar strings -->
+    <string name="ram_bar_title">Recientes RAM bar</string>
+    <string name="ram_bar_summary">Muestra el uso de RAM en la vista de apps recientes</string>
+    <string name="ram_bar_note_title">Nota</string>
+    <string name="ram_bar_note_summary">Esta rambar muestra cómo Android está realmente utilizando la memoria RAM disponible. Tenga en cuenta que el tener las aplicaciones abiertas en segundo plano y en caché ayuda para su dispositivo para abrir las aplicaciones más rápido.</string>
+    <string name="ram_bar_mode_title">Modo recientes RAM bar</string>
+    <string name="ram_bar_mode_dialog_title">Mostrar en recents bar RAM</string>
+    <string name="ram_bar_none">Ninguna</string>
+    <string name="ram_bar_apps">Aplicaciones</string>
+    <string name="ram_bar_cache">Aplicaciones y cache</string>
+    <string name="ram_bar_other">Aplicaciones, cache y otros</string>
+    <string name="ram_bar_style_cat">Recientes RAM bar estilo</string>
+    <string name="ram_bar_color_app_mem_color">Aplicaciones RAM color</string>
+    <string name="ram_bar_color_cache_mem_color">Cache RAM color</string>
+    <string name="ram_bar_color_total_mem_color">Otros RAM color</string>
+    <string name="ram_bar_color_enabled">Activado</string>
+    <string name="ram_bar_color_disabled">Desactivado</string>
+    <string name="ram_bar_button_reset">Restablecer colores</string>
+
+    <!-- StatusBar Battery Settings -->
+    <string name="status_bar_battery_title">Estilo de batería</string>
+    <string name="battery_icon_title">Icono de batería</string>
+    <string name="status_bar_style_icon_portrait">Icono vertical</string>
+    <string name="status_bar_style_icon_landscape">Icono horizontal</string>
+    <string name="status_bar_style_circle">Círculo</string>
+    <string name="status_bar_style_text">Texto</string>
+    <string name="status_bar_style_hidden">Oculta</string>
+    <string name="status_bar_battery_show_percent_title">Mostrar porcentaje de batería</string>
+
+    <!-- Double tap to sleep -->
+    <string name="status_bar_double_tap_to_sleep_title">Dos toques para apagar</string>
+
+    <!-- Lock Gesture settings -->
+    <!-- Security & location settings screen, setting option name -->
+    <string name="lockgesture_change_lock_pattern_label">Cambiar gesto de desbloqueo</string>
+    <!-- Security & location settings screen, change unlock gesture screen instruction when the user chooses "Change unlock gesture".  We first ask the user toe nter the current pattern, and this is the message seen -->
+    <string name="lockgesture_change_lock_pin_label">Cambiar PIN de desbloqueo</string>
+    <!-- Security & location settings screen, change unlock gesture screen instruction when the user chooses "Change unlock gesture".  We first ask the user toe nter the current pattern, and this is the message seen -->
+    <string name="lockgesture_need_to_unlock">Confirmar guardar gesto</string>
+    <!-- Do not translate. -->
+    <string name="lockgesture_need_to_unlock_footer" />
+    <!-- Security & location settings screen, change unlock gesture screen instruction if user draws incorrect pattern -->
+    <string name="lockgesture_need_to_unlock_wrong">Intentar de nuevo:</string>
+    <!-- Do not translate. -->
+    <string name="lockgesture_need_to_unlock_wrong_footer" />
+    <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen.  This si when they are supposed to draw a new unlock pattern (for example, if they are changing their unlock patterns)..-->
+    <string name="lockgesture_recording_intro_header">Dibujar gesto de desbloqueo:</string>
+    <!-- Security & location settings screen, change unlock gesture screen hint on bottom of screen.  We are telling them to press the menu button to see more options or help. -->
+    <string name="lockgesture_recording_intro_footer">Presiona menú para ayuda.</string>
+    <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen while drawing pattern -->
+    <string name="lockgesture_recording_inprogress">Suelte el dedo cuando se hace.</string>
+    <!-- Security & location settings screen, change unlock gesture screen message on top of screen after drawing pattern -->
+    <string name="lockgesture_pattern_entered_header">Gesto registrado.</string>
+    <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen to confirm pattern -->
+    <string name="lockgesture_need_to_confirm">Dibuje el gesto de nuevo para confirmar:</string>
+    <string name="lockgesture_pattern_confirmed_header">Tu nuevo gesto de desbloqueo:</string>
+    <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen.  After they draw a gesture and release their finger, we display the pattern so they remember.  When they are ready to draw it once again to confirm it, they press this button. -->
+    <string name="lockgesture_confirm_button_text">Confirmar</string>
+    <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen.  After they draw a gesture and release their finger, we display the pattern so they remember.  If they are nto satisfied with this pattern, they click this button to redraw the pattern. -->
+    <string name="lockgesture_restart_button_text">Redibujar</string>
+    <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen. If they are supposed to enter their current gesture before being able to draw another one, and they screw up, they hit this button to try again -->
+    <string name="lockgesture_retry_button_text">Reintentar</string>
+    <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen. Once they draw a new gesture and confirm it by drawing it again, they press this button to exit -->
+    <string name="lockgesture_continue_button_text">Continuar</string>
+    <!-- Security & location settings screen, unlock screen activity title -->
+    <string name="lockgesture_settings_title">Desbloquear gesto</string>
+    <!-- Security & location settings screen, setting check box title if the unlock pattern MUST be drawn everytime they turn on the screen -->
+    <string name="lockgesture_settings_enable_title">Requerir gesto</string>
+    <!-- Security & location settings screen, setting summary for the checkbox "Require pattern" -->
+    <string name="lockgesture_settings_enable_summary">Debe dibujar el gesto para desbloquear la pantalla</string>
+   <!-- Security & location settings screen, setting check box title. This setting controls whether a visible gesture is drawn as the user moves his finger around while drawing the unlock pattern.  If checked, this line is drawn.  If unchecked, there is nothing drawn so the user does not reveal his pattern while he unlocks the phone.-->
+    <string name="lockgesture_settings_enable_visible_pattern_title">Hacer gesto visible</string>
+    <!-- Security & location settings screen, setting check box title. This controls whether the device locks immediately when the power button is pressed. [CHAR LIMIT=28]-->
+    <string name="lockgesture_settings_enable_power_button_instantly_locks">El botón de encendido se bloquea al instante</string>
+    <!-- Security & location settings screen, setting option name when user has never set an unlock gesture -->
+    <string name="lockgesture_settings_choose_lock_pattern">Establecer gesto de desbloqueo</string>
+    <!-- Security & location settings screen, setting option name when user has previously set an unlock gesture and wants to change to a new pattern -->
+    <string name="lockgesture_settings_change_lock_pattern">Cambie gesto de desbloqueo</string>
+    <!-- Security & location settings screen, the help instructions (an animation) caption -->
+    <string name="lockgesture_settings_help_how_to_record">Cómo dibujar un gesto de desbloqueo</string>
+    <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen after too many incorrect attempts -->
+    <string name="lockgesture_too_many_failed_confirmation_attempts_header">Demasiados intentos incorrectos!</string>
+    <!-- Security & location settings screen, change unlock gesture screen countdown hint on bottom of screen after too many incorrect attempts -->
+    <string name="lockgesture_too_many_failed_confirmation_attempts_footer">Intentalo de nuevo en <xliff:g id="number">%d</xliff:g> seconds.</string>
+    <!-- Toast shown if setting gesture was successful -->
+    <string name="lockpassword_gesture_set_toast">El gesto se ha establecido</string>
+    <!-- Header on gesture confirm screen [CHAR LIMIT=30] -->
+    <string name="lockpassword_confirm_your_gesture_header">Confirmar tu gesto</string>
+    <!-- Header on first screen of choose gesture flow [CHAR LIMIT=30] -->
+    <string name="lockpassword_choose_your_gesture_header">Dibujar tu gesto</string>
+
+    <!-- Title for preference that guides the user through creating an unlock gesture [CHAR LIMIT=22] -->
+    <string name="unlock_set_unlock_gesture_title">Gesto</string>
+    <!-- Title for preference that guides the user through creating an unlock gesture [CHAR LIMIT=45] -->
+    <string name="unlock_set_unlock_gesture_summary">Seguridad baja, experimental</string>
+
+    <!-- Summary for "Configure lockscreen" when security gesture is enabled [CHAR LIMIT=45] -->
+    <string name="unlock_set_unlock_mode_gesture">Gesto</string>
 </resources>
