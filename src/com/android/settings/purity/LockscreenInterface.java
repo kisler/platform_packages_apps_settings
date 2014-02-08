@@ -40,10 +40,12 @@ public class LockscreenInterface extends SettingsPreferenceFragment {
     private static final String KEY_ENABLE_WIDGETS = "keyguard_enable_widgets";
     private static final String KEY_ENABLE_CAMERA = "keyguard_enable_camera";
     private static final String KEY_SEE_TRHOUGH = "see_through";
+    private static final String BATTERY_AROUND_LOCKSCREEN_RING = "battery_around_lockscreen_ring";
 
     private CheckBoxPreference mEnableKeyguardWidgets;
     private CheckBoxPreference mEnableCameraWidget;
     private CheckBoxPreference mSeeThrough;
+    private CheckBoxPreference mLockRingBattery;
 
     private ChooseLockSettingsHelper mChooseLockSettingsHelper;
     private LockPatternUtils mLockUtils;
@@ -93,6 +95,13 @@ public class LockscreenInterface extends SettingsPreferenceFragment {
             widgetsCategory.removePreference(
                     findPreference(Settings.System.LOCKSCREEN_MAXIMIZE_WIDGETS));
         }
+
+ 	// Lock ring battery
+        mLockRingBattery = (CheckBoxPreference)findPreference(BATTERY_AROUND_LOCKSCREEN_RING);
+        if (mLockRingBattery != null) {
+            mLockRingBattery.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.BATTERY_AROUND_LOCKSCREEN_RING, 0) == 1);
+        }
     }
 
     @Override
@@ -122,7 +131,10 @@ public class LockscreenInterface extends SettingsPreferenceFragment {
         } else if (preference == mSeeThrough) {
             Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_SEE_THROUGH,
                    mSeeThrough.isChecked() ? 1 : 0);
-        }
+        } else if (preference == mLockRingBattery) {
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                   Settings.System.BATTERY_AROUND_LOCKSCREEN_RING, mLockRingBattery.isChecked() ? 1 : 0);
+	}
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
